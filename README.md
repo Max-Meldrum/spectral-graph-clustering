@@ -3,7 +3,7 @@
 Implementation based on the paper: On Spectral Clustering: Analysis and an algorithm By Ng, Jordan and Weiss.
 
 
-![alt text](https://github.com/Max-Meldrum/spectral-graph-clustering/blob/master/images/example1.jpg?raw=true "example")
+![alt text](https://github.com/Max-Meldrum/spectral-graph-clustering/blob/master/images/example1r.jpg?raw=true "example")
 
 
 Requirements:
