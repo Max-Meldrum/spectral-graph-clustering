@@ -15,5 +15,5 @@ Requirements:
 Running: 
     
     chmod +x spectral_clustering.m
-    ./spectral_clustering.m example1.dat
+    ./spectral_clustering.m <file> <K>
 

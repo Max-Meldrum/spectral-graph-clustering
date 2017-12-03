@@ -12,6 +12,7 @@ pkg load statistics
 
 arg_list = argv ();
 file = arg_list{1};
+K = str2num(arg_list{2});
 
 printf("Running spectral graph clustering algorithm\n");
 
@@ -35,9 +36,9 @@ AD = NewD*A;
 %%  L = D^{-1/2} AD{-1/2}
 L = NewD*AD;
 
+
 %% Step 3
-K = 2;
-%% lm is set as default
+%% lm sigma is set as default
 [X, ~] = eigs(L, K);
 
 %% Step 4
@@ -57,7 +58,7 @@ end
 [idx, ~] = kmeans(Y, K);
 
 %% Step 6
-colors = {'m', 'b', 'c'};
+colors = {'m', 'b', 'c', 'r', 'y'};
 
 hold on;
 for i=1:size(A,1)
