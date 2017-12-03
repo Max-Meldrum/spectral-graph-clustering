@@ -28,7 +28,7 @@ A = full(As);
 
 %% Step 2
 %% Get Degree Matrix
-D = diag(sum(A, 2));
+D = diag(sum(A, 1));
 
 NewD = mpower(D, -0.5);
 AD = NewD*A;
@@ -57,13 +57,14 @@ end
 [idx, ~] = kmeans(Y, K);
 
 %% Step 6
-color = {'m', 'b', 'c','r','y'};
+colors = {'m', 'b', 'c'};
+
 hold on;
 for i=1:size(A,1)
-  c = idx(i,1);
+  z = idx(i,1);
   for j=1:size(A,2)  
     if A(i,j) == 1
-        plot(i,j,'color', color{c}, 'marker', '*');
+        plot(i,j,'color', colors{z}, 'marker', '*');
     end  
   end  
 end
