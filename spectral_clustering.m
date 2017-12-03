@@ -67,4 +67,5 @@ for i=1:size(A,1)
     end  
   end  
 end
+hold off;
 print -djpg output.jpg
